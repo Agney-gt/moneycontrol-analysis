@@ -1,20 +1,38 @@
 # moneycontrol-analysis
-This project is a web scraper built using Python and Selenium to extract financial data from the website moneycontrol.com. The scraper automates the process of collecting data for multiple companies listed on the website and saves the data in a structured format for further analysis.
+The project provides a comprehensive solution for extracting and analyzing financial data from moneycontrol.com, enabling users to gain insights and perform 5 years trend analysis on various metrics. 
 
-The scraper utilizes various functionalities provided by Selenium, such as browser automation, locating elements by XPath, interacting with elements, and handling exceptions. It also incorporates other libraries like Pandas, BeautifulSoup, and NumPy for data manipulation and analysis.
+It can be used for research, investment analysis, or any application that requires financial data from the website.
+    Profitability Metrics:
+        Net Profit/Share (Rs.)_Linear_Regression: Indicates the company's bottom-line profitability on a per-share basis.
+        Profit Margins (PBDIT, PBIT, PBT, Net Profit)_Linear_Regression: Evaluate the company's ability to convert revenue into profit at different stages of the income statement.
+        Return on Networth / Equity (_Linear_Regression): Measures how well the company generates returns for its shareholders' equity.
+        Return on Capital Employed (_Linear_Regression): Assesses the efficiency of capital utilization in generating profits.
+        Return on Assets (_Linear_Regression): Indicates how efficiently the company uses its assets to generate profits.
 
-The main features of this scraper include:
+    Financial Position Metrics:
+        Total Debt/Equity (_Linear_Regression): Assesses the company's leverage and its ability to cover obligations with equity.
+        Current Ratio (_Linear_Regression): Measures short-term liquidity and the company's ability to cover its short-term liabilities with assets.
+        Quick Ratio (_Linear_Regression): Similar to the current ratio but excludes inventory, providing a more stringent measure of short-term liquidity.
 
-Scraping financial data: The code navigates to the company pages on moneycontrol.com and extracts various financial metrics such as beta, volume, sector PE, book value, price, PE ratio, EPS growth, promoter share, foreign institutional investor share, revenue, and market depth buy/sell ratio.
+    Efficiency Metrics:
+        Asset Turnover Ratio (_Linear_Regression): Evaluates how efficiently the company utilizes its assets to generate revenue.
+        Inventory Turnover Ratio (_Linear_Regression): Measures how quickly the company sells and replaces its inventory.
 
-Scraping financial ratios: The code also visits the ratio-specific pages for each company and extracts relevant financial ratios. The ratios are then stored in a separate CSV file for each company.
+    Dividend Metrics:
+        Dividend / Share(_Linear_Regression): Indicates the dividend distributed to shareholders on a per-share basis.
+        Dividend Payout Ratio (_Linear_Regression): Shows the proportion of earnings paid out as dividends, providing insight into dividend sustainability.
 
-Data preprocessing: After scraping the data, the code performs necessary data preprocessing tasks, such as removing commas from numeric values, filling missing values with zeros, and saving the data into a CSV file.
+    Valuation Metrics:
+        Price/BV (_Linear_Regression): Compares the market price of a share to its book value, assessing the stock's relative valuation.
+        Price/Net Operating Revenue (_Linear_Regression): Evaluates the market price in relation to net operating revenue, helping assess valuation.
+        Earnings Yield (_Linear_Regression): Represents the earnings per share relative to the market price of a share, indicating the yield for investors.
 
-Linear regression analysis: The code further processes the data by preparing it for linear regression analysis. It organizes the data into separate arrays for each metric over a five-year period. It then applies linear regression models to each metric and stores the resulting trends in a new DataFrame.
+    Enterprise Value Metrics:
+        Enterprise Value (_Linear_Regression): Represents the total value of a company, combining market capitalization and debt.
+        EV/Net Operating Revenue (_Linear_Regression): Compares enterprise value to net operating revenue, aiding in assessing relative valuation.
+        EV/EBITDA (_Linear_Regression): Measures enterprise value relative to earnings before interest, taxes, depreciation, and amortization, providing an indication of a company's overall profitability.
 
-Output and visualization: Finally, the code combines the original data with the linear regression trends and saves the final analysis in a CSV file. The output can be further utilized for visualizations or other statistical analysis.
-
-https://app.noteable.io/published/ab6fdb9e-0abb-4b78-b2db-7623e78a9c8c/Moneycontrol-June-2023
-
-The project provides a comprehensive solution for extracting and analyzing financial data from moneycontrol.com, enabling users to gain insights and perform trend analysis on various metrics. It can be used for research, investment analysis, or any application that requires financial data from the website.
+    Retention and Earnings Metrics:
+        Earnings Retention Ratio (_Linear_Regression): Measures the proportion of earnings retained by the company for reinvestment.
+        Cash Earnings Retention Ratio (_Linear_Regression): Focuses on the proportion of cash earnings retained for future use.
+        Retention Ratios (_Linear_Regression): Provide insights into how much of the company's earnings are reinvested.
